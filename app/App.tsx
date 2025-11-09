@@ -1,7 +1,6 @@
 'use client';
 
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
-import '@openai/chatkit-react/styles.css';
 
 const CHATKIT_DOMAIN_KEY = process.env.NEXT_PUBLIC_CHATKIT_DOMAIN_KEY;
 

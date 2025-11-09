@@ -13,7 +13,7 @@ if (!CHATKIT_DOMAIN_KEY) {
 export default function Home() {
   const chatkit = useChatKit({
     api: {
-      url: '/api/chatkit',
+      url: '/api/chat',
       domainKey: CHATKIT_DOMAIN_KEY || "",
     },
     theme: {

@@ -42,8 +42,8 @@ export default function Home() {
   });
 
   return (
-    <div className="relative pb-8 flex h-[90vh] w-full rounded-2xl flex-col overflow-hidden bg-white shadow-sm transition-colors dark:bg-slate-900">
-      <ChatKit control={chatkit.control} />
+    <div>
+      <ChatKit control={chatkit.control} style={{ height: '100%', width: '100%' }}/>
     </div>
   );
 }

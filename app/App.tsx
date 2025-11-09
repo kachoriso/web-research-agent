@@ -2,7 +2,7 @@
 
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
 
-const CHATKIT_DOMAIN_KEY = process.env.CHATKIT_DOMAIN_KEY;
+const CHATKIT_DOMAIN_KEY = process.env.NEXT_PUBLIC_CHATKIT_DOMAIN_KEY;
 
 if (!CHATKIT_DOMAIN_KEY) {
   throw new Error(

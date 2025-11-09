@@ -1,7 +1,7 @@
 'use client';
 
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
-import '@openai/chatkit/styles.css';
+import '@openai/chatkit-react/styles.css';
 
 const CHATKIT_DOMAIN_KEY = process.env.NEXT_PUBLIC_CHATKIT_DOMAIN_KEY;
 
@@ -43,8 +43,8 @@ export default function Home() {
   });
 
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-      <ChatKit control={chatkit.control} className="block h-full w-full" />
+    <div>
+      <ChatKit control={chatkit.control} />
     </div>
   );
 }

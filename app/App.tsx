@@ -2,7 +2,9 @@
 
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
 
-if (!process.env.CHATKIT_DOMAIN_KEY) {
+const CHATKIT_DOMAIN_KEY = process.env.CHATKIT_DOMAIN_KEY;
+
+if (!CHATKIT_DOMAIN_KEY) {
   throw new Error(
     'CHATKIT_DOMAIN_KEY is not set. Did you forget to set it in Vercel or .env.local?'
   );
@@ -12,7 +14,7 @@ export default function Home() {
   const chatkit = useChatKit({
     api: {
       url: '/api/chatkit',
-      domainKey: process.env.CHATKIT_DOMAIN_KEY || "",
+      domainKey: CHATKIT_DOMAIN_KEY || "",
     },
     theme: {
       radius: 'round',

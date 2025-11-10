@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './ChatStyles.module.css';
 
 interface Message {
@@ -68,7 +69,7 @@ export default function Home() {
             <span className={styles.roleLabel}>{msg.role === 'user' ? 'You' : 'AI'}:</span>
             {msg.role === 'assistant' ? (
               <div className={styles.markdownContent}>
-                <ReactMarkdown>{msg.content}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
               </div>
             ) : (
               <p>{msg.content}</p>

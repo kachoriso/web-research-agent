@@ -1,15 +1,11 @@
-@import "tailwindcss";
-
 html, body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-body > div,
-body > div > div {
-  height: 100%;
-  width: 100%;
+  background-color: #f0f2f5; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
